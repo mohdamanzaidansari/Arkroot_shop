@@ -259,7 +259,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                       elevation: 4,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(15),
-                        child: _image == null
+                        child: _editingProduct.image == ''
                             ? Container(
                                 width: 100,
                                 height: 100,
@@ -269,7 +269,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               )
                             : FittedBox(
                                 child: Image.file(
-                                  _image!,
+                                  File(_editingProduct.image),
                                   fit: BoxFit.cover,
                                   width: 100,
                                   height: 100,
